@@ -53,6 +53,24 @@ struct SettingsView: View {
                 .padding(.bottom, 16)
             }
             .listRowSeparator(.hidden)
+            
+            Section(
+                header: Text("ABOUT THE APP"),
+                footer: HStack {
+                    Spacer()
+                    Text("Copyright @ All right reserved.")
+                    Spacer()
+                }
+                    .padding(.vertical, 8)
+            ) {
+//                LabeledContent("Application", value: "Hike")
+                CustomListRowView(rowLabel: "Application", rowIcon: "apps.iphone", rowContent: "HIKE", rowTintColor: .blue)
+                
+                CustomListRowView(rowLabel: "Compatibility", rowIcon: "info.circle", rowContent: "iOS, iPadOS", rowTintColor: .red)
+                
+                CustomListRowView(rowLabel: "Technology", rowIcon: "swift", rowContent: "Swift", rowTintColor: .orange)
+
+            }
         }
     }
 }
